@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minha Lista de Tarefas</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <button class="theme-toggle" onclick="toggleTheme()">☾☀︎</button>
+
+
+    <div class="container">
+        <h1>Minhas Tarefas</h1>
+
+
+        <div class="input-section">
+            <input type="text" id="taskInput" placeholder="O que você vai fazer hoje?">
+            <button id="addButton" onclick="addTask()">Adicionar</button>
+        </div>
+
+
+        <div class="filter-section">
+            <button class="filter-btn active" onclick="filterTask('all')">Todas</button>
+            <button class="filter-btn active" onclick="filterTask('active')">Ativas</button>
+            <button class="filter-btn active" onclick="filterTask('completed')">Concluídas</button>
+        </div>
+
+
+        <div class="task-container" id="taskContainer">
+
+
+        </div>
+
+
+        <div class="stats-section">
+            <span id="taskCount">Total : 0 tarefas</span>
+            <button class="clear-btn" onclick="clearCompleted()">Limpar Comcluídas</button>
+        </div>
+    </div>
+    <script src="./js/script.js"></script>
+</body>
+</html>

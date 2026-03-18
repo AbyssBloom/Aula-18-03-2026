@@ -1,0 +1,272 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+body{
+    background: linear-gradient(135deg,#667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    padding: 20px;
+}
+
+
+.container{
+    max-width: 800px;
+    margin: 0 auto;
+    background: whitesmoke;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+}
+
+
+h1{
+    color: #333;
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2.5em;
+}
+
+
+.input-section{
+    display: flex;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+
+#taskInput{
+    flex: 1;
+    padding: 15px;
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+
+#taskInput{
+    outline: none;
+    border-color: #667eea;
+}
+
+
+#addButton{
+    padding: 15px 30px;
+    background: linear-gradient(135deg,#667eea 0%,#764ba2 100%);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s,box-shadow 0.2s;
+}
+
+
+#addButton:hover{
+    transform: translateY(-2px);
+    box-shadow: 0 5px 20px rgba(102,126,234,0.4);
+}
+
+
+.filter-section{
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    justify-content: center;
+}
+
+
+.filter-btn{
+    padding: 10px 20px;
+    border: none;
+    background: #f0f0ff;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.3s;
+}
+
+
+.filter-btn:active{
+    background: linear-gradient(135deg,#667eea 0%,#764ba2 100%);
+    color: white;
+}
+
+
+.task-container{
+    min-height: 400%;
+}
+
+
+.task-item{
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    background: #f8f9fa;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    animation: slideIn 0.3 ease;
+    transition: transform 0.2s;
+}
+
+
+@keyframes slideIn{
+    from{
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+.task-item:hover{
+    transform: translateY(5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+
+.task-checkbox{
+    margin-right: 15px;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+
+.task-text{
+    flex: 1;
+    font-size: 16px;
+    color: #333;
+}
+
+
+.task-text.completed{
+    text-decoration: line-through;
+    color: #999;
+}
+
+
+.task-date{
+    font-size: 12px;
+    color: #999;
+    margin-right: 15px;
+}
+
+
+.delete-brn{
+    background: #ff4757;
+    color: white;
+    border: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: background 0.3s;
+}
+
+
+.delete-brn:hover{
+    background: #ff6b81;
+}
+
+
+.stats-section{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 2px solid #e0e0e0;
+    color: #666;
+}
+
+
+.clear-btn{
+    padding: 8px 16px;
+    background: #ff4757;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+
+.clear-btn:hover{
+    background: #ff6b81;
+}
+
+
+.empty-message{
+    text-align: center;
+    color: #999;
+    padding: 40px;
+    font-size: 18px;
+}
+
+
+.theme-toggle{
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: white;
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 24px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+    transition: transform 0.3s;
+}
+
+
+.theme-toggle:hover{
+    transform: scale(1.1);
+}
+
+
+/*Tema Escuro*/
+body.dark-theme{
+    background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
+}
+
+
+body.dark-theme .container{
+    background: #2d3436;
+    color: white;
+}
+
+
+body.dark-theme h1,
+body.dark-theme .task-text,
+body.dark-theme .stats-section{
+    color: white;
+}
+body.dark-theme .task-item{
+    background: #3d3d3d;
+}
+
+
+body.dark-theme .task-text.completed{
+    color: #888;
+}
+
+
+body.dark-theme .filter-btn{
+    background: #3d3d3d;
+    color: white;
+}
